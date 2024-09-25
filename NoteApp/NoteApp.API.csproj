@@ -24,4 +24,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NoteApp.DataAccess\NoteApp.Data.csproj" />
+  </ItemGroup>
+
 </Project>
