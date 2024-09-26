@@ -6,11 +6,8 @@ public class Note
 {
     public int Id { get; set; }
 
-    [Required]
-    [MaxLength(100)]
     public string Title { get; set; }
 
-    [Required]
     public string Description { get; set; }
 
     public string ImageUrl { get; set; }

@@ -21,10 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\NoteApp.Core\NoteApp.Core.csproj" />
     <ProjectReference Include="..\NoteApp.DataAccess\NoteApp.Data.csproj" />
   </ItemGroup>
 

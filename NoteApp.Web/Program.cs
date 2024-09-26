@@ -1,7 +1,15 @@
+using NoteApp.Web.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient<INoteApiClient, NoteApiClient>(client =>
+{
+    var apiUrl = builder.Configuration["ApiClientSettings:BaseUrl"];
+    client.BaseAddress = new Uri(apiUrl);
+});
 
 var app = builder.Build();
 
@@ -22,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Notes}/{action=Index}/{id?}");
 
 app.Run();
