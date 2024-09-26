@@ -4,6 +4,8 @@ namespace NoteApp.Core.Dtos;
 
 public class NoteDto
 {
+    public int Id { get; set; }
+
     [Required(ErrorMessage = "Title is required.")]
     [StringLength(30, ErrorMessage = "Title cannot be longer than 30 characters.")]
     public string Title { get; set; }

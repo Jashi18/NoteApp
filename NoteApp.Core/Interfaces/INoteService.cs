@@ -5,15 +5,10 @@ namespace NoteApp.Core.Interfaces;
 
 public interface INoteService
 {
-    Task<IEnumerable<Note>> GetAllNotesAsync();
-
-    Task<Note> GetNoteByIdAsync(int id);
-
-    Task<IEnumerable<Note>> SearchNotesByTitleAsync(string searchTerm);
-
-    Task<Note> CreateNoteAsync(NoteDto noteDto);
-
-    Task<Note> UpdateNoteAsync(int id, NoteDto noteDto);
-
+    Task<IEnumerable<NoteDto>> GetAllNotesAsync();
+    Task<NoteDto> GetNoteByIdAsync(int id);
+    Task<IEnumerable<NoteDto>> SearchNotesByTitleAsync(string searchTerm);
+    Task<NoteDto> CreateNoteAsync(NoteDto noteDto);
+    Task<NoteDto> UpdateNoteAsync(int id, NoteDto noteDto);
     Task<bool> DeleteNoteAsync(int id);
 }
